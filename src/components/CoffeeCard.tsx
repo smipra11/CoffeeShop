@@ -3,7 +3,7 @@ import React from 'react'
 import { COLORS, SPACING, BORDERRADIUS, FONTFAMILY, FONTSIZE } from '../theme/theme';
 import LinearGradient from 'react-native-linear-gradient';
 import CustomIcon from './CustomIcon';
-import BGIcon from './bgIcon';
+import BGIcon from './BGIcon';
 const CARD_WIDTH = Dimensions.get('window').width * 0.32;
 
 interface CoffeeProps {
