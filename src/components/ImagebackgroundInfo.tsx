@@ -57,11 +57,11 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
                 {
                     EnableBackHandler ?
                         <View style={styles.ImageHeaderBarContainerWithBack}>
-                            <TouchableOpacity onPress={()=>BackHandler()}>
-                          <GradientBgIcon name="left" color={COLORS.primaryLightGreyHex} size={FONTSIZE.size_16}/>
+                            <TouchableOpacity onPress={() => BackHandler()}>
+                                <GradientBgIcon name="left" color={COLORS.primaryLightGreyHex} size={FONTSIZE.size_16} />
                             </TouchableOpacity>
                             <TouchableOpacity>
-                            <GradientBgIcon name="like" color={COLORS.primaryLightGreyHex} size={FONTSIZE.size_16}/>    
+                                <GradientBgIcon name="like" color={COLORS.primaryLightGreyHex} size={FONTSIZE.size_16} />
                             </TouchableOpacity>
 
                         </View>
@@ -101,8 +101,22 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
                                 </View>
 
                             </View>
-                            
 
+
+
+                        </View>
+                        <View style={styles.InfoContainerRow} >
+                            <View style={{display:'flex',flexDirection:'row'}}>
+                            <CustomIcon name="star" size={FONTSIZE.size_18} color={COLORS.primaryOrangeHex}
+                            />
+                            <Text style={{ color: COLORS.primaryWhiteHex, fontSize: FONTSIZE.size_16,marginLeft:SPACING.space_8,marginRight:SPACING.space_8 }}> {average_rating}</Text>
+                            <Text style={{ color: COLORS.primaryLightGreyHex, fontSize: FONTSIZE.size_16 }}> {`(${ratings_count})`}</Text>
+                          </View>
+                          <View style={styles.RoastedContainer}>
+                            <Text style={{color:COLORS.primaryLightGreyHex,fontSize:FONTSIZE.size_12}}>{roasted}</Text>
+
+
+                          </View>
                         </View>
                     </View>
                 </View>
@@ -163,6 +177,14 @@ const styles = StyleSheet.create({
     ProperFirst: {
         height: 55,
         width: 55,
+        borderRadius: BORDERRADIUS.radius_15,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: COLORS.primaryBlackHex,
+    },
+    RoastedContainer:{
+        
+        width: 40,
         borderRadius: BORDERRADIUS.radius_15,
         justifyContent: 'center',
         alignItems: 'center',
